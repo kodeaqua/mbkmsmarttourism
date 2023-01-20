@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="d-flex justify-content-center">
-                    <h3>Your dashboard</h3>
+                    <h1 class="display-5 fw-bold">Dashboard</h1>
                 </div>
                 <ol class="list-group">
                     <a href="{{ route('spatials.index') }}" class="text-decoration-none">

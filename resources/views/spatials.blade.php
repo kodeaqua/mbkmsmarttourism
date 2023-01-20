@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="d-flex justify-content-center">
-                    <h3>Manage spatials</h3>
+                    <h1 class="display-5 fw-bold">Manage spatials</h1>
                 </div>
 
                 @if (session('success'))

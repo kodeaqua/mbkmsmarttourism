@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-md navbar-light border-bottom py-3 sticky-top">
-    <div class="container align-items-baseline">
+    <div class="container align-items-center">
+        <a class="navbar-brand display-5 fw-bold" href="{{ route('landing') }}">
 
-        <a class="navbar-brand fw-semibold" href="{{ route('landing') }}">
             <span>
                 <img src="{{ asset('assets/images/unpak.png') }}" alt="logo-unpak" height="32px">
             </span>
-            <!--
+
             <span class="mx-3">
                 <img src="{{ asset('assets/images/kampus-merdeka.png') }}" alt="logo-kampus-merdeka" height="32px">
             </span>
-        -->
+
             {{ config('app.name', 'Laravel') }}
 
         </a>
