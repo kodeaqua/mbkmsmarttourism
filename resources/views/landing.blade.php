@@ -30,6 +30,10 @@
 
                 <div class="mt-5"></div>
                 <h1 class="display-5 fw-bold">Recommended for you!</h1>
+                <div class="p-5 text-bg-primary rounded border-0 shadow-lg">
+                    <h2>X village</h2>
+                    <p>There are N landmarks, N ammusement park, N cafes, N restaurant in here.</p>
+                </div>
 
 
                 <div class="mt-5"></div>
@@ -41,9 +45,12 @@
                             @csrf
                             <input type="search" name="search" class="form-control py-3" placeholder="Search places">
                             @if (request('search'))
-                                <div class="d-flex my-3">
+                                <div class="d-flex flex-row align-items-baseline my-3">
                                     <p>Showing {{ $spatials->count() }} results for <span
                                             class="text-primary fw-bold">{{ request('search') }}</span></p>
+                                    <a class="btn btn-secondary ms-2" href="{{ route('landing') }}">
+                                        Clear
+                                    </a>
                                 </div>
                             @endif
                         </form>
