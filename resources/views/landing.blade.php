@@ -28,14 +28,27 @@
                     </script>
                 @endforeach
 
-                <!--
-                                        <div class="mt-5"></div>
-                                        <h1 class="display-5 fw-bold">Recommended for you!</h1>
-                                        -->
+                <div class="mt-5"></div>
+                <h1 class="display-5 fw-bold">Recommended for you!</h1>
+
 
                 <div class="mt-5"></div>
                 <h1 class="display-5 fw-bold">or browse as you go</h1>
+
                 <div class="card border-0 shadow-lg p-5">
+                    <div class="">
+                        <form action="{{ route('landing') }}" method="get">
+                            @csrf
+                            <input type="search" name="search" class="form-control py-3" placeholder="Search places">
+                            @if (request('search'))
+                                <div class="d-flex my-3">
+                                    <p>Showing {{ $spatials->count() }} results for <span
+                                            class="text-primary fw-bold">{{ request('search') }}</span></p>
+                                </div>
+                            @endif
+                        </form>
+                    </div>
+
                     <table class="table">
                         <thead>
                             <tr>
